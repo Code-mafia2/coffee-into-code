@@ -1,0 +1,175 @@
+/* Define light mode variables */
+:root {
+    --background-color: #f3f3f3;
+    --header-bg-color: #007bff;
+    --header-text-color: white;
+    --label-color: #555;
+    --input-border-color: #ccc;
+    --button-bg-color: #28a745;
+    --button-hover-bg-color: #218838;
+    --result-bg-color: #fafafa;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --container-width: 600px;
+    --container-padding: 20px;
+}
+
+/* Body styles (Light Mode) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+}
+
+.header .logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+/* Container styles */
+.container {
+    max-width: var(--container-width);
+    margin: 50px auto;
+    background: white;
+    padding: var(--container-padding);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Planner form */
+.planner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: var(--label-color);
+}
+
+select, button {
+    padding: 10px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Button styles */
+button {
+    background-color: var(--button-bg-color);
+    color: var(--header-text-color);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+/* Result container */
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    background: var(--result-bg-color);
+}
+
+/* Dark Mode styles */
+.dark-mode {
+    --background-color: #121212;
+    --header-bg-color: #1e1e1e;
+    --header-text-color: #ffffff;
+    --label-color: #e0e0e0;
+    --input-border-color: #4a4a4a;
+    --button-bg-color: #bb86fc;
+    --button-hover-bg-color: #03dac6;
+    --result-bg-color: #1e1e1e;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Mode body */
+body.dark-mode {
+    background-color: var(--background-color);
+    color: var(--header-text-color);
+}
+
+.header.dark-mode {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+}
+
+#result.dark-mode {
+    background-color: var(--result-bg-color);
+    color: var(--header-text-color);
+}
+
+/* Dark Mode button */
+button.dark-mode {
+    background-color: var(--button-bg-color);
+    color: var(--header-text-color);
+}
+
+button.dark-mode:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    select, button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    button {
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    select, button {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    label {
+        font-size: 10px;
+    }
+}
